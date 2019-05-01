@@ -1,0 +1,21 @@
+{
+  "name": "webpack-node-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production --module-bind 'node=node-loader' --entry ./main.js --target electron-main",
+    "test": "npm run build && exit $(grep -c \"$(pwd)\" ./dist/null.js)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keytar": "4.6.0",
+    "node-loader": "0.6.0",
+    "webpack": "4.30.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "3.3.1"
+  }
+}
