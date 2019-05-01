@@ -2,10 +2,9 @@
   "name": "webpack-node-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production --module-bind 'node=node-loader' --entry ./main.js --target electron-main",
-    "test": "npm run build && exit $(grep -c \"$(pwd)\" ./dist/null.js)"
+    "build": "webpack --mode production --module-bind 'node=node-loader'",
+    "test": "npm run build && exit $(grep -c \"$(pwd)\" ./dist/main.js)"
   },
   "keywords": [],
   "author": "",
